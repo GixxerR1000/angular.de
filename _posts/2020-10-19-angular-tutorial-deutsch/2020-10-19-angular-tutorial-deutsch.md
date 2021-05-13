@@ -605,7 +605,7 @@ Es hat sich als guter Stil etabliert, Variablen und Felder, welche asynchrone Da
 
 ```typescript
 export class BookListComponent {
-  books$: Observable<Object>;
+  books$: Observable<Object> | any;
 
   constructor(private bookData: BookDataService) {
     this.books$ = this.bookData.getBooks();
